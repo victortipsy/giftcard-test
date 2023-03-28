@@ -10,10 +10,10 @@ import UserNotify from "../DashBoards/User/Pages/Notify.User";
 import SideNav from "../DashBoards/User/SideNavs/Nav.User";
 import MobileNavs from "../DashBoards/User/SideNavs/Mobile.Nav";
 import DetailCard from "../DashBoards/User/Pages/DetailCard";
+import Payment from "../Payment/Payment";
 
 const UserRoutes = () => {
   const [showing, setShowing] = React.useState(false);
-
   let element = useRoutes([
     {
       path: "/user-dashboard",
@@ -32,7 +32,7 @@ const UserRoutes = () => {
       element: <UserNotify />,
     },
     {
-      path: "/user-dashboard/card/id",
+      path: "/user-dashboard/card/:id",
       element: <DetailCard />,
     },
   ]);

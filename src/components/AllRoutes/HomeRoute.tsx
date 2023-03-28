@@ -9,6 +9,7 @@ import SelectAccount from "../Auth/SelectAccount";
 import Homescreen from "../LandingPage/Homescreen";
 // import { dummy_user } from "../Global/ReduxState";
 import DefaultScreen from "../DefaultScreen";
+import Payment from "../Payment/Payment";
 
 const HomeRoute = () => {
   const elements = useRoutes([

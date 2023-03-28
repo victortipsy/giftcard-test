@@ -12,6 +12,7 @@ import BusinessSupport from "../DashBoards/Business/Pages/Support.Business";
 import BusinessAccount from "../DashBoards/Business/Pages/Account.Business";
 import MobileNavs from "../DashBoards/Business/SideNav/Mobile.Nav";
 import BusinessMobileNavs from "../DashBoards/Business/SideNav/Mobile.Nav";
+import Payment from "../Payment/Payment";
 
 const BusinessRoutes = () => {
   const [showing, setShowing] = React.useState(false);
