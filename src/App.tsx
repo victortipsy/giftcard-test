@@ -3,8 +3,7 @@ import HomeRoute from "./components/AllRoutes/HomeRoute";
 import BusinessRoutes from "./components/AllRoutes/BusinessRoute";
 import UserRoutes from "./components/AllRoutes/UserRoutes";
 import { useAppSelector } from "./components/Global/Store";
-import PrivateRoutes from "./components/Private/Private";
-import { dummy_user } from "./components/Global/ReduxState";
+
 function App() {
   const business = useAppSelector((state) => state.bizClient);
   const user = useAppSelector((state) => state.userData);
@@ -13,6 +12,7 @@ function App() {
   return (
     <div>
       <HomeRoute />
+
       {/* <BusinessRoutes />
       <UserRoutes /> */}
       {business?.name ? <BusinessRoutes /> : null}

@@ -10,6 +10,7 @@ import UserNotify from "../DashBoards/User/Pages/Notify.User";
 import SideNav from "../DashBoards/User/SideNavs/Nav.User";
 import MobileNavs from "../DashBoards/User/SideNavs/Mobile.Nav";
 import DetailCard from "../DashBoards/User/Pages/DetailCard";
+
 import { useAppSelector } from "../Global/Store";
 
 const UserRoutes = () => {
@@ -34,7 +35,7 @@ const UserRoutes = () => {
       element: <UserNotify />,
     },
     {
-      path: "/user-dashboard/card/id",
+      path: "/user-dashboard/card/:id",
       element: <DetailCard />,
     },
   ]);
