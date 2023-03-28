@@ -10,9 +10,11 @@ import UserNotify from "../DashBoards/User/Pages/Notify.User";
 import SideNav from "../DashBoards/User/SideNavs/Nav.User";
 import MobileNavs from "../DashBoards/User/SideNavs/Mobile.Nav";
 import DetailCard from "../DashBoards/User/Pages/DetailCard";
+import { useAppSelector } from "../Global/Store";
 
 const UserRoutes = () => {
   const [showing, setShowing] = React.useState(false);
+  const user = useAppSelector((state) => state.userData);
 
   let element = useRoutes([
     {
@@ -39,13 +41,15 @@ const UserRoutes = () => {
   return (
     <div style={{ display: "flex", overflow: "hidden" }}>
       <WrapHead>
+        {/* {user?.status === "User" ? <SideNav /> : null} */}
         <SideNav />
       </WrapHead>
       <Wrapper>{element}</Wrapper>
       <Shower
         onClick={() => {
           setShowing(!showing);
-        }}>
+        }}
+      >
         <TbArrowsLeftRight />
       </Shower>
       {showing ? <MobileNavs /> : null}
