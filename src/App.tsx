@@ -1,6 +1,5 @@
 import React from "react";
 import HomeRoute from "./components/AllRoutes/HomeRoute";
-import PrivateRoutes from "./components/Private/Private";
 import BusinessRoutes from "./components/AllRoutes/BusinessRoute";
 import UserRoutes from "./components/AllRoutes/UserRoutes";
 import { useAppSelector } from "./components/Global/Store";
@@ -11,10 +10,8 @@ function App() {
   return (
     <div>
       <HomeRoute />
-      <PrivateRoutes>
-        {/* {user ? <UserRoutes /> : <HomeRoute />} */}
-        {business ? <BusinessRoutes /> : <UserRoutes />}
-      </PrivateRoutes>
+      <BusinessRoutes />
+      <UserRoutes />
     </div>
   );
 }

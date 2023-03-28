@@ -11,18 +11,6 @@ import Homescreen from "../LandingPage/Homescreen";
 import DefaultScreen from "../DefaultScreen";
 
 const HomeRoute = () => {
-  const navigate = useNavigate();
-  const business = useAppSelector((state) => state.bizClient);
-  const user = useAppSelector((state) => state.userData);
-
-  useEffect(() => {
-    if (business) {
-      navigate("/dashboard", { replace: true });
-    } else if (user) {
-      navigate("/user-dashboard", { replace: true });
-    }
-  }, []);
-
   const elements = useRoutes([
     {
       path: "/",
